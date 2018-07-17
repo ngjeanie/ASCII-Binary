@@ -98,8 +98,8 @@ public class BitsAndBytes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    String strSecretMessage, strASCII, strBinary, strBinaryOutput; //Declaration of strin variables
-    int i; //Declaration of interger variables 
+    String strSecretMessage, strASCII, strBinary, strBinaryOutput; //Declaration of string variables
+    int i; //Declaration of integer variables 
     
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
     strSecretMessage = this.txtSecretMessage.getText(); //Converts the message input into txtSecretMessage into a string variable stored in strSecretMessage
@@ -111,9 +111,9 @@ public class BitsAndBytes extends javax.swing.JFrame {
         strBinary = Integer.toBinaryString(strSecretMessage.charAt(i));
         lblOutputB.setText("Binary: " + (strBinaryOutput += strBinary + " "));
     } /*Integer i starts at zero and will increase at intervals of "1" until the length of the message is reached 
-        When we start i at 0, the program will read the characters of the message that is input into the program at index zero until the last haracter of the message
-        strASCII adds on the additional ASCII code of the next letter everytime the loop runs via the += operation
-        In order to get the ASCII code of a specific letter (int) strSecretMessage.charAt(i) is used, i is used as he integer because i will increase by 1 (will shift one letter to the right) until the length of the message is read
+        When we start i at 0, the program will read the characters of the message that is input into the program at index zero until the last character of the message
+        strASCII adds on the additional ASCII character of the next letter everytime the loop runs via the += operation
+        In order to get the ASCII code of a specific letter (int) strSecretMessage.charAt(i) is used, i is used as the integer because i will increase by 1 (will shift one letter to the right) until the length of the message is read
         The ASCII characters are displayed in lblOutput along with "ASCII: " and a space is added into strASCII to separate the ASCII characters
         Integer.toBinaryString converts integers into binary; because the ASCII characters stored in strSecretMessage are integers, the ASCII characters representing the English characters in the code will be converted to binary and stored in strBinary
         strBinaryOutput adds on the additional binary codes of the following letters in the message as the loop repeats and is displayed in lblOutputB along with "Binary: " and a space to separate the binary codes for each individual letter 
